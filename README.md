@@ -6,12 +6,7 @@ This is the repository for my new portfolio project.
 
 - Responsive design
 - Modern UI/UX
-- Easy to customize
-- Built with [your tech stack]
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
+- Built with [React,  TypeScript]
 
 ## License
 
