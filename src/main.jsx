@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from "react-router-dom";
 import './index.css'
 
 // Web Files
@@ -12,11 +13,13 @@ import Contact from './components/Contact'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BrowserRouter basename="/portfolio">
     <Navbar />
     <Home />
     <About />
     <Project />
     <Contact />
+    </BrowserRouter>
   </StrictMode>,
 )
 
