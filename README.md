@@ -1,4 +1,4 @@
-# New Portfolio
+# Portfolio
 
 This is the repository for my new portfolio project.
 
