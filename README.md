@@ -21,4 +21,4 @@ Portfolio: [Website Link ](https://kaushalsahu07.github.io/portfolio/).<br>
 X (Tweeter): [@kaushalsahu_07](https://x.com/kaushalsahu_07?t=7nk-jApWrJkgW6YwklJZWQ&s=09).<br>
 
 ## Design
-![project-6](https://github.com/user-attachments/assets/f860d349-03f7-4591-b9da-9fe0c5f84279)
+![linkedin-1](https://github.com/user-attachments/assets/bebfa759-2f3a-4771-81bb-196c0d42b79d)
