@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://kaushalsahu07.github.io/portfolio/",
+  "homepage": "https://kaushalsahu07.github.io/portfolio/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -24,6 +24,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.10",
     "motion": "^12.4.10",
+    "ogl": "^1.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-globe.gl": "^2.33.1",
