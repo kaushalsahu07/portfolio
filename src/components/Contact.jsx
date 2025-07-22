@@ -27,7 +27,7 @@ export default function Contact() {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="a"
-            href="mailto:kaushal.r.sahu@outlook.com?subject=Let's Talk"
+            href="mailto:kaushalsahu.me@gmail.com?subject=Let's Talk"
             className="bg-[var(--color-bg)] text-white w-[12rem] sm:w-[14rem] h-12 flex items-center justify-center space-x-2"
           >
             <span>
