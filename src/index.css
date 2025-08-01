@@ -6,7 +6,7 @@
 @import "tailwindcss";
 
 :root{
-  --color-bg: #0D1117;
+  --color-bg: #000000;
   --color-second: #111927;
   --color-main: #0395FF;
 
@@ -108,10 +108,9 @@ body {
 }
 @media only screen and (max-width: 360px) {
   body{
-    width: 95%;
+    width: 100%;
   }
   .nav{
-    width: 300px;
     font-size: 14px;
   }
 }

@@ -19,6 +19,6 @@
         "@/*": ["./src/*"]
     }
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/main.jsx"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/main.jsx", "src/components/ui/LightRays.jsx"],
     "exclude": ["node_modules"]
 }
