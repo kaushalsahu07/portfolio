@@ -14,7 +14,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 ## Contact
-For any inquiries, reach out at [kaushalsahu.me@gmail.com].<br>
+For any inquiries, reach out at kaushalsahu.me@gmail.com.<br>
 GitHub: [@kaushalsahu07](https://github.com/kaushalsahu07).<br>
 Linkedin: [@kaushalsahu07](www.linkedin.com/in/kaushalsahu07).<br>
 Instagram: [@cd.kaushal](https://www.instagram.com/cd.kaushal?igsh=cTVram1ia3Vvamxz).<br>
