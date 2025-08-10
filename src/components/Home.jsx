@@ -11,7 +11,7 @@ import grid from "../assets/grid.svg";
 function Home() {
   return (
     <section id="home">
-      <div className="h-[52rem] -z-10 xl:mt-12  text-center flex flex-col justify-center items-center">
+      <div className="h-screen -z-10 xl:mt-12  text-center flex flex-col justify-center items-center">
         {/* background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="md:block hidden" > <Spotlight /> </div>

@@ -24,18 +24,18 @@ import SpotlightCard from "./ui/SpotlightCard";
 function About() {
   return (
     <section id="about">
-      <div className="flex-col xl:flex-row flex justify-center items-center gap-5 mt-1">
+      <div className="flex-col xl:flex-row flex justify-center items-center gap-5">
         {/* box 1 */}
         <div className="w-full min-h-[30rem] sm:h-[40rem] md:h-[38rem] lg:h-[41rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
           <SpotlightCard
             className="h-full"
             spotlightColor="rgba(17, 25, 45, 1)"
           >
-            <div className="w-[39.9rem] h-full rounded-[10px] text-center flex flex-col items-center p-4">
+            <div className="w-full max-w-[40rem] h-full rounded-[10px] text-center flex flex-col justify-center items-center p-4">
               <img src={bgImage} className="absolute left-0 top-0" />
-              <div className="mt-15 mb-20 text-amber-50 gap-5 flex flex-col justify-center items-center">
+              <div className="max-w-[30rem]mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
-                <p className="w-[80%]">
+                <p>
                   A web development enthusiast from India. I have a solid
                   foundation in HTML, CSS, and JavaScript, which are the
                   building blocks of the web. I’m also skilled in Tailwind CSS,
