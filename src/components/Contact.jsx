@@ -137,6 +137,7 @@ export default function Contact() {
           </div>
         </div>
         {/* footer */}
+        <footer className="w-full flex justify-center items-center z-10 mt-10 px-2">
         <div className="w-full lg:w-[80%] flex sm:flex-row gap-5 justify-between items-center mt-20 flex-col-reverse">
           <div className="flex justify-center items-center">
             <p className="text-white text-sm">©2025 Kaushal Sahu.</p>
@@ -177,6 +178,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
+        </footer>
       </div>
     </section>
   );

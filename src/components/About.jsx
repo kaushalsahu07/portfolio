@@ -32,7 +32,7 @@ function About() {
             spotlightColor="rgba(17, 25, 45, 1)"
           >
             <div className="w-full max-w-[40rem] h-full rounded-[10px] text-center flex flex-col justify-center items-center p-4">
-              <img src={bgImage} className="absolute left-0 top-0" />
+              <img src={bgImage} alt="BgImage" className="absolute left-0 top-0" />
               <div className="max-w-[30rem]mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
                 <p>
@@ -50,7 +50,7 @@ function About() {
               <img
                 src={b2Image}
                 className="w-[15rem] lg:w-[24rem] xl:w-[25rem] md:w-[20rem] absolute bottom-0 right-0"
-                alt="img"
+                alt="BgImage"
               />
             </div>
           </SpotlightCard>
@@ -66,6 +66,7 @@ function About() {
               <div className="w-full h-full bg-[var(--color-bg)] rounded-[10px] flex flex-col justify-center items-center gap-5 md:gap-8 p-4">
                 <img
                   src={grid}
+                  alt="grid"
                   className="absolute w-full h-full top-0 object-cover"
                 />
                 <div className="text-center mt-5 md:mt-0">
@@ -107,14 +108,14 @@ function About() {
               spotlightColor="rgba(17, 25, 45, 1)"
             >
               <div className="w-full min-h-[20rem] bg-[var(--color-bg)] rounded-[10px] flex flex-col justify-center items-center p-4">
-                <img src={bgImage} className="absolute left-0 top-0" />
+                <img src={bgImage} alt="BgImage" className="absolute left-0 top-0" />
                 <h1 className="text-[20px] text-teal-50 font-sans font-semibold text-center">
                   Feel free to connect with me on social media.
                 </h1>
 
                 <div className="flex flex-wrap justify-center gap-2.5 mt-5 z-10">
                   <a
-                    className="w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="github-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
                     href="https://github.com/kaushalsahu07"
                     target="_blank"
                     rel="noreferrer"
@@ -130,7 +131,7 @@ function About() {
                     <FontAwesomeIcon className="pr-1.5" icon={faLinkedin} /> LinkedIn
                   </a>
                   <a
-                    className="w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="instagram-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
                     href="https://www.instagram.com/cd.kaushal/"
                     target="_blank"
                     rel="noreferrer"
@@ -138,7 +139,7 @@ function About() {
                     <FontAwesomeIcon className="pr-1.5" icon={faInstagram} /> Instagram
                   </a>
                   <a
-                    className="w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="twitter-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
                     href="https://x.com/kaushalsahu_07"
                     target="_blank"
                     rel="noreferrer"
