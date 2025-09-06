@@ -1,0 +1,27 @@
+# robots.txt for Kaushal Sahu's Portfolio
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap location (you should create this)
+Sitemap: https://kaushalsahu07.github.io/portfolio/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 10
