@@ -108,7 +108,7 @@ export default function Contact() {
                     required
                     rows={6}
                     placeholder="Write your message..."
-                    className="w-full rounded-xl bg-white/5 placeholder-white/50 text-white px-4 py-3 border border-white/10 focus:border-white/30 focus:ring-2 focus:ring-blue-500/40 outline-none resize-y"
+                    className="w-full resize-none rounded-xl bg-white/5 placeholder-white/50 text-white px-4 py-3 border border-white/10 focus:border-white/30 focus:ring-2 focus:ring-blue-500/40 outline-none"
                   />
                 </div>
 
