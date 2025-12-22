@@ -1,0 +1,41 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: 
+      - main  # Triggers when you push to main branch
+
+permissions:
+  contents: write  # Allows the workflow to push to gh-pages branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Checkout your code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # or whatever version you use
+          cache: 'npm'
+      
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm ci
+      
+      # 4. Build the project
+      - name: Build
+        run: npm run build
+      
+      # 5. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Vite builds to 'dist' by default
+          cname: kaushalsahu.tech  # Your custom domain
