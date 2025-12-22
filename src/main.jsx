@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter } from "react-router-dom";
+import Snowfall from "react-snowfall";
 import "./index.css";
 
 // Web Files
@@ -13,11 +14,20 @@ import Contact from "./components/Contact";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HashRouter>
-        <Navbar />
-        <Home />
-        <About />
-        <Project />
-        <Contact />
+      <Snowfall
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+        }}
+        radius={[0.5, 1.5]}
+        snowflakeCount={50}
+      />
+      <Navbar />
+      <Home />
+      <About />
+      <Project />
+      <Contact />
     </HashRouter>
   </StrictMode>
 );
