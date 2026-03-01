@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "framer-motion";
 
 type SpotlightProps = {
   gradientFirst?: string;
@@ -25,6 +25,8 @@ export const Spotlight = ({
   duration = 7,
   xOffset = 100,
 }: SpotlightProps = {}) => {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.div
       initial={{
@@ -39,15 +41,17 @@ export const Spotlight = ({
       className="pointer-events-none absolute inset-0 h-full w-full"
     >
       <motion.div
-        animate={{
-          x: [0, xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
+        animate={prefersReducedMotion ? { x: 0 } : { x: [0, xOffset, 0] }}
+        transition={
+          prefersReducedMotion
+            ? { duration: 0 }
+            : {
+                duration,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }
+        }
         className="absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none"
       >
         <div
@@ -82,15 +86,17 @@ export const Spotlight = ({
       </motion.div>
 
       <motion.div
-        animate={{
-          x: [0, -xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
+        animate={prefersReducedMotion ? { x: 0 } : { x: [0, -xOffset, 0] }}
+        transition={
+          prefersReducedMotion
+            ? { duration: 0 }
+            : {
+                duration,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }
+        }
         className="absolute top-0 right-0 w-screen h-screen z-40 pointer-events-none"
       >
         <div

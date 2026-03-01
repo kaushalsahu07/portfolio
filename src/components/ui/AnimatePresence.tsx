@@ -5,19 +5,36 @@ export function useScrollDirection() {
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
 
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
-        setScrollDirection(direction);
+      const deltaY = scrollY - lastScrollY;
+
+      if (Math.abs(deltaY) < 10) {
+        ticking = false;
+        return;
       }
+
+      const direction = deltaY > 0 ? "down" : "up";
+      setScrollDirection((prevDirection) =>
+        prevDirection === direction ? prevDirection : direction
+      );
+
       lastScrollY = scrollY > 0 ? scrollY : 0;
+      ticking = false;
     };
 
-    window.addEventListener("scroll", updateScrollDirection);
-    return () => window.removeEventListener("scroll", updateScrollDirection);
-  }, [scrollDirection]);
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateScrollDirection);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return scrollDirection;
 }

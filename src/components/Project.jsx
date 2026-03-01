@@ -3,11 +3,16 @@ import "../index.css";
 import Box from "./ui/box";
 
 //image
-import Project1 from "../assets/project-1.png";
-import Project2 from "../assets/project-2.png";
-import Project3 from "../assets/project-3.png";
-import Project4 from "../assets/project-4.png";
-import Project5 from "../assets/project-5.png";
+import Project1Webp from "../assets/project-1.webp";
+import Project1Avif from "../assets/project-1.avif";
+import Project2Webp from "../assets/project-2.webp";
+import Project2Avif from "../assets/project-2.avif";
+import Project3Webp from "../assets/project-3.webp";
+import Project3Avif from "../assets/project-3.avif";
+import Project4Webp from "../assets/project-4.webp";
+import Project4Avif from "../assets/project-4.avif";
+import Project5Webp from "../assets/project-5.webp";
+import Project5Avif from "../assets/project-5.avif";
 
 function Project() {
   return (
@@ -18,7 +23,9 @@ function Project() {
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 mt-10">
           <Box
-            img={Project1}
+            img={Project1Webp}
+            imgWebp={Project1Webp}
+            imgAvif={Project1Avif}
             title="Car Website"
             description="Elecar is a simple car website template built with HTML, Tailwind Css, and JavaScript and it is Responsive design."
             github="https://github.com/kaushalsahu07/elecar"
@@ -29,7 +36,9 @@ function Project() {
             tailwindcss={true}
           />
           <Box
-            img={Project2}
+            img={Project2Webp}
+            imgWebp={Project2Webp}
+            imgAvif={Project2Avif}
             title="Weather App"
             description="This project is a web application that provides real-time weather updates for any location."
             link="https://kaushalsahu07.github.io/weather/"
@@ -39,7 +48,9 @@ function Project() {
             javascript={true}
           />
           <Box
-            img={Project3}
+            img={Project3Webp}
+            imgWebp={Project3Webp}
+            imgAvif={Project3Avif}
             title="SketchSpark"
             description="SketchSpark is an AI-powered whiteboard for effortless, intelligent diagram creation and editing."
             link="https://sketchspark.netlify.app/"
@@ -49,7 +60,9 @@ function Project() {
             tailwindcss={true}
           />
           <Box
-            img={Project4}
+            img={Project4Webp}
+            imgWebp={Project4Webp}
+            imgAvif={Project4Avif}
             title="DeliveryPartner"
             description="DeliveryPartner is a web template designed for businesses that offer delivery services. It provides a customizable."
             link="https://kaushalsahu07.github.io/DeliveryPartner/"
@@ -59,7 +72,9 @@ function Project() {
             javascript={true}
           />
           <Box
-            img={Project5}
+            img={Project5Webp}
+            imgWebp={Project5Webp}
+            imgAvif={Project5Avif}
             title="Red Store"
             description="The website features product listings, categories, and a user-friendly interface for a smooth shopping experience."
             link="https://kaushalsahu07.github.io/red-store/"

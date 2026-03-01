@@ -16,6 +16,8 @@ import { HoverBorderGradient } from "./hover-border-gradient";
 
 interface BoxProps {
   img: string;
+  imgWebp?: string;
+  imgAvif?: string;
   title?: string;
   description?: string;
   link?: string;
@@ -30,6 +32,8 @@ interface BoxProps {
 
 function Box({
   img,
+  imgWebp,
+  imgAvif,
   title,
   description,
   github,
@@ -46,11 +50,18 @@ function Box({
       as="div"
       className="bg-[var(--color-bg)] h-auto p-2 sm:p-3 lg:p-5 sm:w-[25rem] md:w-[30rem] lg:w-[35rem] xl:w-[36rem] flex flex-col justify-center z-10"
     >
-      <img
-        src={img}
-        alt={title || "Project thumbnail"}
-        className="w-[34rem] mr-auto ml-auto rounded-2xl"
-      />
+      <picture>
+        {imgAvif && <source srcSet={imgAvif} type="image/avif" />}
+        {imgWebp && <source srcSet={imgWebp} type="image/webp" />}
+        <img
+          src={img}
+          alt={title || "Project thumbnail"}
+          className="w-[34rem] mr-auto ml-auto rounded-2xl"
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 640px) 95vw, (max-width: 1024px) 80vw, 576px"
+        />
+      </picture>
       <div className="p-4">
         {title && (
           <h3 className="text-lg text-amber-50 font-semibold">{title}</h3>

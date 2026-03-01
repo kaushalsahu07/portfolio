@@ -1,22 +1,23 @@
 import React from "react";
 import "../index.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useScrollDirection } from "./ui/AnimatePresence";
 import GlassSurface from "./ui/GlassSurface";
 
 function Navbar() {
   const scrollDirection = useScrollDirection();
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={prefersReducedMotion ? false : { opacity: 0, y: -100 }}
         animate={{
           opacity: 1,
-          y: scrollDirection === "down" ? -100 : 0,
+          y: prefersReducedMotion ? 0 : scrollDirection === "down" ? -100 : 0,
         }}
         transition={{
-          duration: 0.3,
+          duration: prefersReducedMotion ? 0 : 0.3,
           ease: "easeInOut",
         }}
         className="fixed top-0 left-0 right-0 z-50"

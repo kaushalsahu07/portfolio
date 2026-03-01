@@ -43,6 +43,8 @@ export default function Contact() {
           src={grid}
           alt="grid"
           className="absolute w-full h-full top-0 object-cover"
+          loading="lazy"
+          decoding="async"
         />
         {/* contact */}
         <div className="w-full flex justify-center z-10 mt-24 px-2">

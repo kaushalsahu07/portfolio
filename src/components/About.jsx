@@ -16,8 +16,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 // Images
-import b2Image from "../assets/b1.svg";
-import bgImage from "../assets/bg.png";
+import b2Image from "../assets/b1-optimized.svg";
+import bgImageWebp from "../assets/bg.webp";
+import bgImageAvif from "../assets/bg.avif";
 import grid from "../assets/grid.svg";
 import SpotlightCard from "./ui/SpotlightCard";
 
@@ -32,7 +33,17 @@ function About() {
             spotlightColor="rgba(17, 25, 45, 1)"
           >
             <div className="w-full max-w-[40rem] h-full rounded-[10px] text-center flex flex-col justify-center items-center p-4">
-              <img src={bgImage} alt="BgImage" className="absolute left-0 top-0" />
+              <picture>
+                <source srcSet={bgImageAvif} type="image/avif" />
+                <source srcSet={bgImageWebp} type="image/webp" />
+                <img
+                  src={bgImageWebp}
+                  alt="BgImage"
+                  className="absolute left-0 top-0"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <div className="max-w-[30rem]mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
                 <p>
@@ -51,6 +62,8 @@ function About() {
                 src={b2Image}
                 className="w-[15rem] lg:w-[24rem] xl:w-[25rem] md:w-[20rem] absolute bottom-0 right-0"
                 alt="BgImage"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </SpotlightCard>
@@ -68,6 +81,8 @@ function About() {
                   src={grid}
                   alt="grid"
                   className="absolute w-full h-full top-0 object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="text-center mt-5 md:mt-0">
                   <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold">
@@ -108,7 +123,17 @@ function About() {
               spotlightColor="rgba(17, 25, 45, 1)"
             >
               <div className="w-full min-h-[20rem] bg-[var(--color-bg)] rounded-[10px] flex flex-col justify-center items-center p-4">
-                <img src={bgImage} alt="BgImage" className="absolute left-0 top-0" />
+                <picture>
+                  <source srcSet={bgImageAvif} type="image/avif" />
+                  <source srcSet={bgImageWebp} type="image/webp" />
+                  <img
+                    src={bgImageWebp}
+                    alt="BgImage"
+                    className="absolute left-0 top-0"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <h1 className="text-[20px] text-teal-50 font-sans font-semibold text-center">
                   Feel free to connect with me on social media.
                 </h1>

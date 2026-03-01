@@ -2,13 +2,15 @@ import React from "react";
 import "../index.css";
 
 // Files
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import Spotlight from "./ui/Spotlight";
 import grid from "../assets/grid.svg";
 
 function Home() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section id="home">
       <div className="h-screen -z-10 xl:mt-12  text-center flex flex-col justify-center items-center">
@@ -19,8 +21,8 @@ function Home() {
         </div>
         {/* name */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, top: 10 }}
-          animate={{ opacity: 1, scale: 1, top: 0 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.5, y: 10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
             delay: 0.3,
             duration: 0.6,
@@ -32,8 +34,8 @@ function Home() {
         </motion.div>
         {/* description */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, top: 100 }}
-          animate={{ opacity: 1, scale: 1, top: 0 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.5, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -51,8 +53,8 @@ function Home() {
         </motion.div>
         {/* button */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, top: 100 }}
-          animate={{ opacity: 1, scale: 1, top: 0 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.5, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
             delay: 0.3,
             duration: 1,
