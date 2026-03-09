@@ -51,10 +51,11 @@ function Project() {
             img={Project3Webp}
             imgWebp={Project3Webp}
             imgAvif={Project3Avif}
-            title="SketchSpark"
-            description="SketchSpark is an AI-powered whiteboard for effortless, intelligent diagram creation and editing."
-            link="https://sketchspark.netlify.app/"
-            github="https://github.com/kaushalsahu07/sketch-spark-diagrams"
+            title="Zora Ai - Chatbot"
+            description="A modern, customizable React chatbot with real-time messaging and a responsive UI."
+            bondText=""
+            link="https://zorai.netlify.app/"
+            github="https://github.com/kaushalsahu07/chatbot"
             react={true}
             javascript={true}
             tailwindcss={true}
