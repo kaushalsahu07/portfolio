@@ -112,10 +112,21 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
 
   const backdropFilterSupported = useMemo(() => {
     if (typeof window === "undefined") return false;
-    return (
-      CSS.supports("backdrop-filter", "blur(10px)") ||
-      CSS.supports("-webkit-backdrop-filter", "blur(10px)")
-    );
+
+    // CSS.supports is reliable for the unprefixed version
+    if (CSS.supports("backdrop-filter", "blur(10px)")) return true;
+
+    // Safari/iOS has supported -webkit-backdrop-filter since iOS 9,
+    // but CSS.supports() can return false for it on some versions.
+    // Detect WebKit and assume support.
+    const isWebkit =
+      /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    if (isWebkit) return true;
+
+    // Final fallback: test via DOM element
+    const el = document.createElement("div");
+    el.style.cssText = "-webkit-backdrop-filter: blur(1px)";
+    return el.style.length > 0;
   }, []);
 
   const generateDisplacementMap = () => {

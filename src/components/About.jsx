@@ -42,7 +42,7 @@ function About() {
                   decoding="async"
                 />
               </picture>
-              <div className="max-w-[30rem]mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
+              <div className="max-w-[30rem] mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
                 <p>
                   BCA student and self-taught developer from Mumbai who fell in love with building things for the web. I specialize in React and TypeScript, and I'm currently deepening my skills across the stack with Node.js and MongoDB. <br />
@@ -62,7 +62,7 @@ function About() {
 
         <div className="flex flex-col justify-center items-center gap-5">
           {/* box 2 - Skills */}
-          <div className="w-full min-h-[20rem] sm:h-[20rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
+          <div className="w-full min-h-[20rem] md:h-[22rem] sm:h-[20rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
             <SpotlightCard
               className="h-full"
               spotlightColor="rgba(17, 25, 45, 1)"

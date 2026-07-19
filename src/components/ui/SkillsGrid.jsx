@@ -34,7 +34,7 @@ const defaultSkills = [
   { name: "TypeScript", customIcon: "typescript", color: "#3178C6" },
   { name: "HTML", icon: faHtml5, color: "#E34F26" },
   { name: "CSS", icon: faCss, color: "#1572B6" },
-  { name: "Tailwind CSS", customIcon: "tailwind", color: "#06B6D4" },
+  { name: "TailwindCSS", customIcon: "tailwind", color: "#06B6D4" },
   { name: "Docker", icon: faDocker, color: "#2496ED" },
 ];
 
@@ -44,7 +44,7 @@ function SkillCard({ skill }) {
     : null;
 
   return (
-    <div className="group flex items-center gap-1 px-5 py-4 rounded-lg border border-neutral-800 bg-[var(--color-second)] hover:border-neutral-600 transition-colors duration-300 cursor-default">
+    <div className="w-[8rem] sm:w-[10rem] group flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-neutral-800 bg-[var(--color-second)] hover:border-neutral-600 transition-colors duration-300 cursor-default">
       <span
         className="text-lg transition-transform duration-300 group-hover:scale-110"
         style={{ color: skill.color }}
@@ -64,7 +64,7 @@ function SkillCard({ skill }) {
 
 function SkillsGrid({ skills = defaultSkills, className = "" }) {
   return (
-    <div className={`flex flex-wrap justify-center items-center gap-3 z-10 ${className}`}>
+    <div className={`flex flex-wrap justify-center items-center gap-2 z-10 max-w-3xl mx-auto ${className}`}>
       {skills.map((skill) => (
         <SkillCard key={skill.name} skill={skill} />
       ))}
