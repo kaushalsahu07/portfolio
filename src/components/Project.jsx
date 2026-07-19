@@ -23,26 +23,26 @@ function Project() {
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 mt-10">
           <Box
-            img={Project1Webp}
-            imgWebp={Project1Webp}
-            imgAvif={Project1Avif}
-            title="Car Website"
-            description="Elecar is a simple car website template built with HTML, Tailwind Css, and JavaScript and it is Responsive design."
-            github="https://github.com/kaushalsahu07/elecar"
-            link="https://kaushalsahu07.github.io/elecar/code/index.html"
-            html={true}
-            css={true}
-            javascript={true}
-            tailwindcss={true}
-          />
-          <Box
             img={Project2Webp}
             imgWebp={Project2Webp}
             imgAvif={Project2Avif}
             title="Weather App"
-            description="This project is a web application that provides real-time weather updates for any location."
-            link="https://kaushalsahu07.github.io/weather/"
-            github="https://github.com/kaushalsahu07/weather"
+            description="Get real-time weather data, forecasts, and location-based weather information."
+            link="https://kaushalsahu07.github.io/weatherapp/"
+            github="https://github.com/kaushalsahu07/weatherapp"
+            react={true}
+            type={true}
+            reactQuery={true}
+            docker={true}
+          />
+          <Box
+            img={Project5Webp}
+            imgWebp={Project5Webp}
+            imgAvif={Project5Avif}
+            title="SkictyNote"
+            description="A simple and lightweight AI React.js Notes App that lets you create, view, edit, and delete notes"
+            link="https://skictynote.netlify.app/"
+            github="https://github.com/kaushalsahu07/notes"
             html={true}
             css={true}
             javascript={true}
@@ -61,6 +61,19 @@ function Project() {
             tailwindcss={true}
           />
           <Box
+            img={Project1Webp}
+            imgWebp={Project1Webp}
+            imgAvif={Project1Avif}
+            title="Car Website"
+            description="Elecar is a simple car website template built with HTML, Tailwind Css, and JavaScript and it is Responsive design."
+            github="https://github.com/kaushalsahu07/elecar"
+            link="https://kaushalsahu07.github.io/elecar/code/index.html"
+            html={true}
+            css={true}
+            javascript={true}
+            tailwindcss={true}
+          />
+          <Box
             img={Project4Webp}
             imgWebp={Project4Webp}
             imgAvif={Project4Avif}
@@ -68,18 +81,6 @@ function Project() {
             description="DeliveryPartner is a web template designed for businesses that offer delivery services. It provides a customizable."
             link="https://kaushalsahu07.github.io/DeliveryPartner/"
             github="https://github.com/kaushalsahu07/DeliveryPartner"
-            html={true}
-            css={true}
-            javascript={true}
-          />
-          <Box
-            img={Project5Webp}
-            imgWebp={Project5Webp}
-            imgAvif={Project5Avif}
-            title="Red Store"
-            description="The website features product listings, categories, and a user-friendly interface for a smooth shopping experience."
-            link="https://kaushalsahu07.github.io/red-store/"
-            github="https://github.com/kaushalsahu07/red-store"
             html={true}
             css={true}
             javascript={true}

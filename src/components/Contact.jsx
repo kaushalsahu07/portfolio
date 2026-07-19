@@ -133,53 +133,53 @@ export default function Contact() {
                   </button>
                 </div>
                 {/* Result */}
-                  <div className="text-amber-50 text-center">{result}</div>
+                <div className="text-amber-50 text-center">{result}</div>
               </form>
             </div>
           </div>
         </div>
         {/* footer */}
         <footer className="w-full flex justify-center items-center z-10 mt-10 px-2">
-        <div className="w-full lg:w-[80%] flex sm:flex-row gap-5 justify-between items-center mt-20 flex-col-reverse">
-          <div className="flex justify-center items-center">
-            <p className="text-white text-sm">©2025 Kaushal Sahu.</p>
-          </div>
+          <div className="w-full lg:w-[80%] flex sm:flex-row gap-5 justify-between items-center mt-20 flex-col-reverse">
+            <div className="flex justify-center items-center">
+              <p className="text-white text-sm">©2026 Kaushal Sahu.</p>
+            </div>
 
-          <div className="flex justify-center items-center z-10 gap-2">
-            <a
-              className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
-              href="https://github.com/kaushalsahu07"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
-              className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
-              href="https://www.linkedin.com/in/kaushalsahu07/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
-              href="https://www.instagram.com/cd.kaushal/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
-              href="https://x.com/kaushalsahu_07"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
+            <div className="flex justify-center items-center z-10 gap-2">
+              <a
+                className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                href="https://github.com/kaushalsahu07"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a
+                className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                href="https://www.linkedin.com/in/kaushalsahu07/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                href="https://www.instagram.com/cd.kaushal/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                className="w-[2rem] h-[2rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                href="https://x.com/kaushalsahu_07"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faXTwitter} />
+              </a>
+            </div>
           </div>
-        </div>
         </footer>
       </div>
     </section>

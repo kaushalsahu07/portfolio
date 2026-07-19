@@ -8,11 +8,6 @@ import {
   faLinkedin,
   faInstagram,
   faXTwitter,
-  faReact,
-  faJs,
-  faHtml5,
-  faCss,
-  faSass
 } from "@fortawesome/free-brands-svg-icons";
 
 // Images
@@ -20,7 +15,10 @@ import b2Image from "../assets/b1-optimized.svg";
 import bgImageWebp from "../assets/bg.webp";
 import bgImageAvif from "../assets/bg.avif";
 import grid from "../assets/grid.svg";
+
+// UI Components
 import SpotlightCard from "./ui/SpotlightCard";
+import SkillsGrid from "./ui/SkillsGrid";
 
 function About() {
   return (
@@ -47,15 +45,8 @@ function About() {
               <div className="max-w-[30rem]mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
                 <p>
-                  A web development enthusiast from India. I have a solid
-                  foundation in HTML, CSS, and JavaScript, which are the
-                  building blocks of the web. I’m also skilled in Tailwind CSS,
-                  a utility-first framework that makes designing sleek and
-                  responsive interfaces a breeze. Currently, I’m expanding my
-                  skill set by learning React, a powerful JavaScript library for
-                  building user interfaces. My goal is to become a full-fledged
-                  web developer, crafting seamless and dynamic web experiences.
-                  While I’m still on my learning journey.
+                  BCA student and self-taught developer from Mumbai who fell in love with building things for the web. I specialize in React and TypeScript, and I'm currently deepening my skills across the stack with Node.js and MongoDB. <br />
+                  When I'm not coding, I'm usually exploring new tools, refining side projects, or looking for ways to sharpen my craft.
                 </p>
               </div>
               <img
@@ -70,21 +61,21 @@ function About() {
         </div>
 
         <div className="flex flex-col justify-center items-center gap-5">
-          {/* box 2 */}
+          {/* box 2 - Skills */}
           <div className="w-full min-h-[20rem] sm:h-[20rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
             <SpotlightCard
               className="h-full"
               spotlightColor="rgba(17, 25, 45, 1)"
             >
-              <div className="w-full h-full bg-[var(--color-bg)] rounded-[10px] flex flex-col justify-center items-center gap-5 md:gap-8 p-4">
+              <div className="w-full h-full bg-[var(--color-bg)] rounded-[10px] flex flex-col justify-center items-center gap-5 md:gap-8 p-6">
                 <img
                   src={grid}
                   alt="grid"
-                  className="absolute w-full h-full top-0 object-cover"
+                  className="absolute w-full h-full top-0 object-cover opacity-60"
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="text-center mt-5 md:mt-0">
+                <div className="text-center mt-5 md:mt-0 z-10">
                   <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold">
                     These are my skill sets,
                   </h3>
@@ -93,30 +84,11 @@ function About() {
                   </h2>
                 </div>
                 {/* skills */}
-                <div className="flex flex-wrap justify-center items-center gap-3 z-10">
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                    <FontAwesomeIcon icon={faReact} /> React
-                  </div>
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                    <FontAwesomeIcon icon={faJs} /> Javascript
-                  </div>
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                    <FontAwesomeIcon icon={faHtml5} /> HTML
-                  </div>
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                   <FontAwesomeIcon icon={faCss} /> CSS
-                  </div>
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                    Tailwindcss
-                  </div>
-                  <div className="w-[7.5rem] h-[4rem] gap-1 flex justify-center items-center text-amber-50 bg-[var(--color-second)] text-[15px] rounded-[10px]">
-                   <FontAwesomeIcon icon={faSass} />Sass
-                  </div>
-                </div>
+                <SkillsGrid />
               </div>
             </SpotlightCard>
           </div>
-          {/* box 3 */}
+          {/* box 3 - Social */}
           <div className="w-full min-h-[20rem] sm:h-[20rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
             <SpotlightCard
               className="h-full"
@@ -134,42 +106,46 @@ function About() {
                     decoding="async"
                   />
                 </picture>
-                <h1 className="text-[20px] text-teal-50 font-sans font-semibold text-center">
+                <h1 className="text-[20px] text-teal-50 font-sans font-semibold text-center z-10">
                   Feel free to connect with me on social media.
                 </h1>
 
-                <div className="flex flex-wrap justify-center gap-2.5 mt-5 z-10">
+                <div className="flex flex-wrap justify-center gap-3 mt-6 z-10">
                   <a
-                    className="github-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="group w-[8.5rem] h-[3.5rem] flex items-center justify-center gap-2 text-amber-50/80 border border-neutral-800 bg-[var(--color-second)] rounded-xl text-sm font-medium transition-all duration-300 hover:border-[#6e5494] hover:text-white hover:shadow-[0_0_20px_rgba(110,84,148,0.2)]"
                     href="https://github.com/kaushalsahu07"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="pr-1.5" icon={faGithub} /> GitHub
+                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faGithub} />
+                    GitHub
                   </a>
                   <a
-                    className="w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="group w-[8.5rem] h-[3.5rem] flex items-center justify-center gap-2 text-amber-50/80 border border-neutral-800 bg-[var(--color-second)] rounded-xl text-sm font-medium transition-all duration-300 hover:border-[#0A66C2] hover:text-[#0A66C2] hover:shadow-[0_0_20px_rgba(10,102,194,0.2)]"
                     href="https://www.linkedin.com/in/kaushalsahu07/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="pr-1.5" icon={faLinkedin} /> LinkedIn
+                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faLinkedin} />
+                    LinkedIn
                   </a>
                   <a
-                    className="instagram-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="group w-[8.5rem] h-[3.5rem] flex items-center justify-center gap-2 text-amber-50/80 border border-neutral-800 bg-[var(--color-second)] rounded-xl text-sm font-medium transition-all duration-300 hover:border-[#E1306C] hover:text-[#E1306C] hover:shadow-[0_0_20px_rgba(225,48,108,0.2)]"
                     href="https://www.instagram.com/cd.kaushal/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="pr-1.5" icon={faInstagram} /> Instagram
+                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faInstagram} />
+                    Instagram
                   </a>
                   <a
-                    className="twitter-link w-[8rem] h-[4rem] flex justify-center items-center text-amber-50 border-2 border-amber-50 bg-[var(--color-bg)] rounded-[10px]"
+                    className="group w-[8.5rem] h-[3.5rem] flex items-center justify-center gap-2 text-amber-50/80 border border-neutral-800 bg-[var(--color-second)] rounded-xl text-sm font-medium transition-all duration-300 hover:border-neutral-500 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.08)]"
                     href="https://x.com/kaushalsahu_07"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="pr-1.5" icon={faXTwitter} /> Twitter
+                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faXTwitter} />
+                    Twitter
                   </a>
                 </div>
               </div>

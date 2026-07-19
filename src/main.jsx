@@ -1,4 +1,4 @@
-import { StrictMode, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import "./index.css";
@@ -11,7 +11,6 @@ const Project = lazy(() => import("./components/Project"));
 const Contact = lazy(() => import("./components/Contact"));
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
     <HashRouter>
       <Navbar />
       <Home />
@@ -21,5 +20,4 @@ createRoot(document.getElementById("root")).render(
         <Contact />
       </Suspense>
     </HashRouter>
-  </StrictMode>
 );
