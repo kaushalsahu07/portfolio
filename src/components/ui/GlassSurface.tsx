@@ -112,7 +112,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
 
   const backdropFilterSupported = useMemo(() => {
     if (typeof window === "undefined") return false;
-    return CSS.supports("backdrop-filter", "blur(10px)");
+    return (
+      CSS.supports("backdrop-filter", "blur(10px)") ||
+      CSS.supports("-webkit-backdrop-filter", "blur(10px)")
+    );
   }, []);
 
   const generateDisplacementMap = () => {
