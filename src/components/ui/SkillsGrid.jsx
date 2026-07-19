@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
@@ -39,34 +38,13 @@ const defaultSkills = [
   { name: "Docker", icon: faDocker, color: "#2496ED" },
 ];
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
-  },
-};
-
 function SkillCard({ skill }) {
   const CustomIconComponent = skill.customIcon
     ? customIcons[skill.customIcon]
     : null;
 
   return (
-    <motion.div
-      variants={cardVariants}
-      className="group flex items-center gap-1 px-5 py-4 rounded-lg border border-neutral-800 bg-[var(--color-second)] hover:border-neutral-600 transition-colors duration-300 cursor-default"
-    >
+    <div className="group flex items-center gap-1 px-5 py-4 rounded-lg border border-neutral-800 bg-[var(--color-second)] hover:border-neutral-600 transition-colors duration-300 cursor-default">
       <span
         className="text-lg transition-transform duration-300 group-hover:scale-110"
         style={{ color: skill.color }}
@@ -80,23 +58,17 @@ function SkillCard({ skill }) {
       <span className="text-amber-50/80 text-sm font-medium group-hover:text-amber-50 transition-colors duration-300">
         {skill.name}
       </span>
-    </motion.div>
+    </div>
   );
 }
 
 function SkillsGrid({ skills = defaultSkills, className = "" }) {
   return (
-    <motion.div
-      className={`flex flex-wrap justify-center items-center gap-3 z-10 ${className}`}
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
+    <div className={`flex flex-wrap justify-center items-center gap-3 z-10 ${className}`}>
       {skills.map((skill) => (
         <SkillCard key={skill.name} skill={skill} />
       ))}
-    </motion.div>
+    </div>
   );
 }
 
