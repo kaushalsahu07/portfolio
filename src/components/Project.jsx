@@ -43,9 +43,9 @@ function Project() {
             description="A simple and lightweight AI React.js Notes App that lets you create, view, edit, and delete notes"
             link="https://skictynote.netlify.app/"
             github="https://github.com/kaushalsahu07/notes"
-            html={true}
-            css={true}
+            react={true}
             javascript={true}
+            tailwindcss={true}
           />
           <Box
             img={Project3Webp}
