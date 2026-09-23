@@ -17,7 +17,7 @@ function Home() {
         {/* background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="md:block hidden" > <Spotlight /> </div>
-        <img src={grid} alt="grid" className="absolute -z-10 w-full h-full top-0 object-cover" />
+          <img src={grid} alt="grid" className="absolute -z-10 w-full h-full top-0 object-cover" />
         </div>
         {/* name */}
         <motion.div

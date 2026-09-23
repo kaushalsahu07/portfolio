@@ -11,13 +11,13 @@ const Project = lazy(() => import("./components/Project"));
 const Contact = lazy(() => import("./components/Contact"));
 
 createRoot(document.getElementById("root")).render(
-    <HashRouter>
-      <Navbar />
-      <Home />
-      <Suspense fallback={null}>
-        <About />
-        <Project />
-        <Contact />
-      </Suspense>
-    </HashRouter>
+  <HashRouter>
+    <Navbar />
+    <Home />
+    <Suspense fallback={null}>
+      <About />
+      <Project />
+      <Contact />
+    </Suspense>
+  </HashRouter>
 );
