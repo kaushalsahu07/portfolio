@@ -50,15 +50,13 @@ export default function Contact() {
         <div className="w-full flex justify-center z-10 mt-24 px-2">
           <div className="w-full lg:w-[80%]">
             <div className="text-center mb-8">
-              <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500">
                 Get in touch
               </h2>
-              <p className="text-white/70 mt-2 text-sm">
-                Have a question or want to collaborate? Drop a message below.
-              </p>
+              <div className="mt-4 mx-auto w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
             </div>
 
-            <div className="max-w-[600px] mx-auto  border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-8 shadow-[inset_0_0_10px_rgba(255,255,255,0.06)]">
+            <div className="max-w-[600px] mx-auto rounded-2xl border border-white/15 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.2)] backdrop-blur-xl sm:p-8">
               <form className="space-y-5" onSubmit={onSubmit}>
                 <div className="grid grid-cols-1 gap-5">
                   {/* Name */}
@@ -135,6 +133,7 @@ export default function Contact() {
                 {/* Result */}
                 <div className="text-amber-50 text-center">{result}</div>
               </form>
+              
             </div>
           </div>
         </div>

@@ -21,7 +21,9 @@ function Project() {
         <h1 className="text-amber-50 font-semibold text-2xl">
           Most recent works <span className="text-[var(--color-main)]">.</span>
         </h1>
-        <div className="flex flex-wrap justify-center items-center gap-8 mt-10">
+        <div className="mt-4  w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+
+        <div className="flex flex-wrap justify-center p-2 items-center gap-10 sm:gap-5 mt-10">
           <Box
             img={Project2Webp}
             imgWebp={Project2Webp}

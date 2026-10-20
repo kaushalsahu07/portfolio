@@ -11,7 +11,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 // Images
-import b2Image from "../assets/b1-optimized.svg";
 import bgImageWebp from "../assets/bg.webp";
 import bgImageAvif from "../assets/bg.avif";
 import grid from "../assets/grid.svg";
@@ -23,6 +22,15 @@ import SkillsGrid from "./ui/SkillsGrid";
 function About() {
   return (
     <section id="about">
+      <div className="flex flex-col items-center mb-5 md:mb-10">
+        <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-3">
+          Get to know me
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500">
+          About Me
+        </h2>
+        <div className="mt-4  w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+      </div>
       <div className="flex-col xl:flex-row flex justify-center items-center gap-5">
         {/* box 1 */}
         <div className="w-full min-h-[30rem] sm:h-[40rem] md:h-[38rem] lg:h-[41rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] relative flex justify-center items-center">
@@ -45,17 +53,14 @@ function About() {
               <div className="max-w-[30rem] mt-15 mb-20 text-center text-amber-50 gap-5 flex flex-col justify-center items-center">
                 <h1>Hey there! I'm Kaushal,</h1>
                 <p>
-                  BCA student and self-taught developer from Mumbai who fell in love with building things for the web. I specialize in React and TypeScript, and I'm currently deepening my skills across the stack with Node.js and MongoDB. <br />
-                  When I'm not coding, I'm usually exploring new tools, refining side projects, or looking for ways to sharpen my craft.
+                  BCA student and self-taught developer from Mumbai who fell in
+                  love with building things for the web. I specialize in React
+                  and TypeScript, and I'm currently deepening my skills across
+                  the stack with Node.js and MongoDB. <br />
+                  When I'm not coding, I'm usually exploring new tools, refining
+                  side projects, or looking for ways to sharpen my craft.
                 </p>
               </div>
-              <img
-                src={b2Image}
-                className="w-[15rem] lg:w-[24rem] xl:w-[25rem] md:w-[20rem] absolute bottom-0 right-0"
-                alt="BgImage"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </SpotlightCard>
         </div>
@@ -117,7 +122,10 @@ function About() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faGithub} />
+                    <FontAwesomeIcon
+                      className="text-lg transition-transform duration-300 group-hover:scale-110"
+                      icon={faGithub}
+                    />
                     GitHub
                   </a>
                   <a
@@ -126,7 +134,10 @@ function About() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faLinkedin} />
+                    <FontAwesomeIcon
+                      className="text-lg transition-transform duration-300 group-hover:scale-110"
+                      icon={faLinkedin}
+                    />
                     LinkedIn
                   </a>
                   <a
@@ -135,7 +146,10 @@ function About() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faInstagram} />
+                    <FontAwesomeIcon
+                      className="text-lg transition-transform duration-300 group-hover:scale-110"
+                      icon={faInstagram}
+                    />
                     Instagram
                   </a>
                   <a
@@ -144,7 +158,10 @@ function About() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon className="text-lg transition-transform duration-300 group-hover:scale-110" icon={faXTwitter} />
+                    <FontAwesomeIcon
+                      className="text-lg transition-transform duration-300 group-hover:scale-110"
+                      icon={faXTwitter}
+                    />
                     Twitter
                   </a>
                 </div>
